@@ -5,20 +5,20 @@
 class Gmux < Formula
   desc ""
   homepage "https://github.com/corvofeng/gmux"
-  version "0.6.9"
+  version "0.7"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/corvofeng/gmux/releases/download/v0.6.9/gmux_darwin_arm64.tar.gz"
-      sha256 "7146a270280b6407dfa63ffc0139145dd5555474ab46c6d04e9690ec96f74591"
+    if Hardware::CPU.intel?
+      url "https://github.com/corvofeng/gmux/releases/download/v0.7/gmux_darwin_amd64.tar.gz"
+      sha256 "b13eeebb0333012c22ef7c0b00d8e602bccdb3a0932328dc5c5fc2fe0c5ebadd"
 
       def install
         bin.install "gmux"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/corvofeng/gmux/releases/download/v0.6.9/gmux_darwin_amd64.tar.gz"
-      sha256 "c2bb4b29e3f60ac5b54f8356fcffdea4ff9d8b26dbb22e3c10cab670d1774637"
+    if Hardware::CPU.arm?
+      url "https://github.com/corvofeng/gmux/releases/download/v0.7/gmux_darwin_arm64.tar.gz"
+      sha256 "cf4087c2fa4db51d5e6552600c7bc95f191c9af350318b46813774cab61c085e"
 
       def install
         bin.install "gmux"
@@ -28,16 +28,16 @@ class Gmux < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/corvofeng/gmux/releases/download/v0.6.9/gmux_linux_arm64.tar.gz"
-      sha256 "494cbc066d8805a57e85cb65476eb400d2f4933e189b4a47662e15c9c3fabee4"
+      url "https://github.com/corvofeng/gmux/releases/download/v0.7/gmux_linux_arm64.tar.gz"
+      sha256 "fda495f215fec4b53b67e67876fcc82711b0e498004061acdf54b32f568677ca"
 
       def install
         bin.install "gmux"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/corvofeng/gmux/releases/download/v0.6.9/gmux_linux_amd64.tar.gz"
-      sha256 "a8b9b4d0ade47723a7f33fd244b16465a365db4edd2e91a58cd1613035d08b0c"
+      url "https://github.com/corvofeng/gmux/releases/download/v0.7/gmux_linux_amd64.tar.gz"
+      sha256 "a338c425091ceead452c83b1fb601acb05b8829ca899503e9f816d2f7c2b99d8"
 
       def install
         bin.install "gmux"
