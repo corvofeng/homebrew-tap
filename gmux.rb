@@ -5,20 +5,20 @@
 class Gmux < Formula
   desc ""
   homepage "https://github.com/corvofeng/gmux"
-  version "0.7"
+  version "0.8.3"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/corvofeng/gmux/releases/download/v0.7/gmux_darwin_amd64.tar.gz"
-      sha256 "b13eeebb0333012c22ef7c0b00d8e602bccdb3a0932328dc5c5fc2fe0c5ebadd"
+      url "https://github.com/corvofeng/gmux/releases/download/v0.8.3/gmux_darwin_amd64.tar.gz"
+      sha256 "2e6a7ecaf0ba0021fafdfe3514d03ae13ec834c919475e2d9709d03ac69546c6"
 
       def install
         bin.install "gmux"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/corvofeng/gmux/releases/download/v0.7/gmux_darwin_arm64.tar.gz"
-      sha256 "cf4087c2fa4db51d5e6552600c7bc95f191c9af350318b46813774cab61c085e"
+      url "https://github.com/corvofeng/gmux/releases/download/v0.8.3/gmux_darwin_arm64.tar.gz"
+      sha256 "66595e51f8ae3886ddd81605918197be7a85bf2f72cd7c103b0dc1663774579c"
 
       def install
         bin.install "gmux"
@@ -27,17 +27,17 @@ class Gmux < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/corvofeng/gmux/releases/download/v0.7/gmux_linux_arm64.tar.gz"
-      sha256 "fda495f215fec4b53b67e67876fcc82711b0e498004061acdf54b32f568677ca"
+    if Hardware::CPU.intel?
+      url "https://github.com/corvofeng/gmux/releases/download/v0.8.3/gmux_linux_amd64.tar.gz"
+      sha256 "42cbdce0e7c695ccfd166a761590cc04b970db901beb458fa6aa46dc034aa1e9"
 
       def install
         bin.install "gmux"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/corvofeng/gmux/releases/download/v0.7/gmux_linux_amd64.tar.gz"
-      sha256 "a338c425091ceead452c83b1fb601acb05b8829ca899503e9f816d2f7c2b99d8"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/corvofeng/gmux/releases/download/v0.8.3/gmux_linux_arm64.tar.gz"
+      sha256 "63b056a0e287f902e9f82e4f847668d5d21e2c8ff488d75a9ffef8ddac988f25"
 
       def install
         bin.install "gmux"
