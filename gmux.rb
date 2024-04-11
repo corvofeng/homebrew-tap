@@ -5,20 +5,20 @@
 class Gmux < Formula
   desc ""
   homepage "https://github.com/corvofeng/gmux"
-  version "0.9.1"
+  version "0.9.2"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/corvofeng/gmux/releases/download/v0.9.1/gmux_darwin_amd64.tar.gz"
-      sha256 "93dc18032969d632816ccfb8c7877030874788e6a93357a6ab05136a2a684cce"
+      url "https://github.com/corvofeng/gmux/releases/download/v0.9.2/gmux_darwin_amd64.tar.gz"
+      sha256 "92fec42e07e9ee1f371c90995a94c0181ad5436cd43d2b271fe54d0bba637812"
 
       def install
         bin.install "gmux"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/corvofeng/gmux/releases/download/v0.9.1/gmux_darwin_arm64.tar.gz"
-      sha256 "4d1186f9db1194a7c2d2e4154258d828685db836b6676ff2dfa80f6a2e5d63be"
+      url "https://github.com/corvofeng/gmux/releases/download/v0.9.2/gmux_darwin_arm64.tar.gz"
+      sha256 "830b5f877cb7b674fb3866a0bf5959092b7dccbab858374ebdfcc43ec806e716"
 
       def install
         bin.install "gmux"
@@ -28,16 +28,16 @@ class Gmux < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/corvofeng/gmux/releases/download/v0.9.1/gmux_linux_amd64.tar.gz"
-      sha256 "c108b6fed6a5c98ee2e4ab6e07b7ad13c6f10bb44af44c3b84d5729392adc5fd"
+      url "https://github.com/corvofeng/gmux/releases/download/v0.9.2/gmux_linux_amd64.tar.gz"
+      sha256 "6421f45bef47c0486ab0eb11a83de1570506700bb4729efca8920da99dd7e205"
 
       def install
         bin.install "gmux"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/corvofeng/gmux/releases/download/v0.9.1/gmux_linux_arm64.tar.gz"
-      sha256 "e22987b84b5efc86152959b0f9b1d40eee31a05cc814bdef3e69c1d943320b81"
+      url "https://github.com/corvofeng/gmux/releases/download/v0.9.2/gmux_linux_arm64.tar.gz"
+      sha256 "afa63c25e6c12d92370633e5da5340db727036e2fc360fb0e3def8a9d310a8bb"
 
       def install
         bin.install "gmux"
