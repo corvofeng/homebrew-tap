@@ -5,20 +5,20 @@
 class Kubemux < Formula
   desc ""
   homepage "https://github.com/corvofeng/kubemux"
-  version "1.1.1"
+  version "1.1.2"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/corvofeng/kubemux/releases/download/v1.1.1/kubemux_darwin_amd64.tar.gz"
-      sha256 "7a4b38aba992a70fed7cc0b737d0fb8abce75896e250a981650df141da4bf680"
+      url "https://github.com/corvofeng/kubemux/releases/download/v1.1.2/kubemux_darwin_amd64.tar.gz"
+      sha256 "7914d4fab12267efeb31dc4e4b9c18bfd7106b35efdf7bfe26a3a8b9ccb3d1ca"
 
       def install
         bin.install "kubemux"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/corvofeng/kubemux/releases/download/v1.1.1/kubemux_darwin_arm64.tar.gz"
-      sha256 "d12624e54e3fa5a694b9a70ca670127882bd346479ce332cff57be51e6477bef"
+      url "https://github.com/corvofeng/kubemux/releases/download/v1.1.2/kubemux_darwin_arm64.tar.gz"
+      sha256 "f7d3c2e603fc5186b60b80a86a60261d31ea9c68656c44fd795d95b58affa840"
 
       def install
         bin.install "kubemux"
@@ -28,16 +28,16 @@ class Kubemux < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/corvofeng/kubemux/releases/download/v1.1.1/kubemux_linux_amd64.tar.gz"
-      sha256 "b9af013b63e33932626ac837639308832fb9e12b06a126adeb0e0dcace7969ac"
+      url "https://github.com/corvofeng/kubemux/releases/download/v1.1.2/kubemux_linux_amd64.tar.gz"
+      sha256 "cf0c7dc9e0181f0dd4bf42f9eb092205cf4bee807238230c687454bc9ac99fc6"
 
       def install
         bin.install "kubemux"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/corvofeng/kubemux/releases/download/v1.1.1/kubemux_linux_arm64.tar.gz"
-      sha256 "579ffdce922097164a02cbfeb2645b85301fce506b2440aeaf4ab9ed5465fbc6"
+      url "https://github.com/corvofeng/kubemux/releases/download/v1.1.2/kubemux_linux_arm64.tar.gz"
+      sha256 "a84b63beee71d06a8d4962815c0be72c638ca5da0d62f3f1f0aeb8c07878fdfd"
 
       def install
         bin.install "kubemux"
