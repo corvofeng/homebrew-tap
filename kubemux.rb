@@ -5,20 +5,20 @@
 class Kubemux < Formula
   desc ""
   homepage "https://github.com/corvofeng/kubemux"
-  version "1.1.3"
+  version "1.2.2"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/corvofeng/kubemux/releases/download/v1.1.3/kubemux_darwin_amd64.tar.gz"
-      sha256 "d23d01dcac14898a9682b50a161f2f9b4321d9a56a711950eae7bf3454d58350"
+    on_intel do
+      url "https://github.com/corvofeng/kubemux/releases/download/v1.2.2/kubemux_darwin_amd64.tar.gz"
+      sha256 "c5952fea4f63651b05dab60da084992684c0c7a680b9736d668aa6730fbb6659"
 
       def install
         bin.install "kubemux"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/corvofeng/kubemux/releases/download/v1.1.3/kubemux_darwin_arm64.tar.gz"
-      sha256 "8052814c9adbcd2fefab4628a31e1924e080d54471b1c9622d0a03954e452fb2"
+    on_arm do
+      url "https://github.com/corvofeng/kubemux/releases/download/v1.2.2/kubemux_darwin_arm64.tar.gz"
+      sha256 "62fb59fc5ee4c3ea85b3780bc21e04a7ee019c85c2f6ff6e7a588e35e9248e40"
 
       def install
         bin.install "kubemux"
@@ -27,20 +27,24 @@ class Kubemux < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/corvofeng/kubemux/releases/download/v1.1.3/kubemux_linux_amd64.tar.gz"
-      sha256 "c7072fe8d3b334cd4fa3540e3120bb5a0c9ce8e65ffe0222997ca81290f0a4e6"
+    on_intel do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/corvofeng/kubemux/releases/download/v1.2.2/kubemux_linux_amd64.tar.gz"
+        sha256 "f1b41143f13d4d27125814e8652bf40a57cb24072d44c75eaa650c744b066bb2"
 
-      def install
-        bin.install "kubemux"
+        def install
+          bin.install "kubemux"
+        end
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/corvofeng/kubemux/releases/download/v1.1.3/kubemux_linux_arm64.tar.gz"
-      sha256 "862900c2040643116ba36371a4b4d4c9e7057eb691352458f2f7f9d605383413"
+    on_arm do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/corvofeng/kubemux/releases/download/v1.2.2/kubemux_linux_arm64.tar.gz"
+        sha256 "d64cde7232e99c02ed42c59d5de387cb1e4cb57dedcde9f39de58d787c2aa923"
 
-      def install
-        bin.install "kubemux"
+        def install
+          bin.install "kubemux"
+        end
       end
     end
   end
