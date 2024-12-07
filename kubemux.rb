@@ -5,20 +5,20 @@
 class Kubemux < Formula
   desc ""
   homepage "https://github.com/corvofeng/kubemux"
-  version "1.2.4"
+  version "1.3.1"
 
   on_macos do
     on_intel do
-      url "https://github.com/corvofeng/kubemux/releases/download/v1.2.4/kubemux_darwin_amd64.tar.gz"
-      sha256 "9089fc6f02634d1874550ecdcc1c3594e76ed7ef644e2c606449e22beff6c200"
+      url "https://github.com/corvofeng/kubemux/releases/download/v1.3.1/kubemux_darwin_amd64.tar.gz"
+      sha256 "c8eae391d55380551e940b78c3b3724112f55b67b39d1b9dad11a7193973c886"
 
       def install
         bin.install "kubemux"
       end
     end
     on_arm do
-      url "https://github.com/corvofeng/kubemux/releases/download/v1.2.4/kubemux_darwin_arm64.tar.gz"
-      sha256 "dd824d28755722ed1fb02abb1ddfd3c2098b84d1cdb8ad8b0d139d441e63ac31"
+      url "https://github.com/corvofeng/kubemux/releases/download/v1.3.1/kubemux_darwin_arm64.tar.gz"
+      sha256 "7d95e1f1da458100f4083deecc408950d7c545a98a5b1e247933bcfc0ee49719"
 
       def install
         bin.install "kubemux"
@@ -29,8 +29,8 @@ class Kubemux < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/corvofeng/kubemux/releases/download/v1.2.4/kubemux_linux_amd64.tar.gz"
-        sha256 "14ed4689f6d5e3df4f7ae4060c22ed994544f2522ac80e4c140f017ca8adf11a"
+        url "https://github.com/corvofeng/kubemux/releases/download/v1.3.1/kubemux_linux_amd64.tar.gz"
+        sha256 "e55965c5b13ad4f5ec1bfebfc0792a286ceeec90fb4944de0a8116a26728a4d2"
 
         def install
           bin.install "kubemux"
@@ -39,8 +39,8 @@ class Kubemux < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/corvofeng/kubemux/releases/download/v1.2.4/kubemux_linux_arm64.tar.gz"
-        sha256 "117a63d81827140e3c7eb034432ffa41b70f44ebe36d423fca95831e57d0ce53"
+        url "https://github.com/corvofeng/kubemux/releases/download/v1.3.1/kubemux_linux_arm64.tar.gz"
+        sha256 "dee904b7597533f810ab29f0ba88ea2b8eb29bf2ec50896fb05e9aecd86582b8"
 
         def install
           bin.install "kubemux"
